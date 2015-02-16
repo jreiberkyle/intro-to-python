@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Tech Chicks CSS HTML</title>
+
+		<meta name="description" content="HTML CSS Workshop for Iowa Tech Chicks">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+<!--  ITC theme -->
+<link rel="stylesheet" href="css/itc.css">
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Intro to Python Workshop</h1>
+					<p>
+						<small>
+							Presented by:  
+							Jennifer Reiber Kyle / <a href="http://twitter.com/jreiberkyl" target="blank">@jreiberkyle</a> and 
+							<a href="http://iowatechchicks.com" target="blank">Iowa Tech Chicks</a> / <a href="http://twitter.com/iowatechchicks" target="blank">@iowatechchicks</a>
+						</small>
+					</p>
+				</section>
+
+                <!-- Slides are separated by newline + three dashes + newline, vertical slides identical but two dashes -->
+                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+                    <script type="text/template">
+## What you will achieve
+Develop a game in Python
+
+---
+
+## How we will get there
+ - Getting Started
+ - Python Language
+ - Programming Basics
+  - Math
+  - Types
+  - Functions
+  - [Variables](#/21)
+  - String formatting
+
+---
+
+## Getting Started
+
+Setup
+
+ - Online Interpreter
+  - [repl.it](http://repl.it/languages/Python)
+
+ - Local Install
+  - **Python application:** Open terminal and type 'python'
+  - **Text Editor:** Sublime Text, Notepad++, Brackets, Vim ... 
+
+---
+
+###Exercise
+Hello World
+
+```python
+>>> print "Hello, world!"
+'Hello, world!'
+```
+
+---
+
+## Python Language
+###What Is Python
+
+ - Python is a programming language
+ - What is a programming language?
+ - Why do we need one?
+
+---
+
+### Your computer speaks another language
+![binary code](./binary-503577_640.jpg)
+
+---
+
+## Why python is great
+
+ - **Easy to use:** It is closer to human language than to machine language.
+ - **Powerful:** It’s used in academic research, Google and NASA.
+ - **Runs Everywhere:** It’s platform independent. You can write your
+program on a Mac and run it on Windows.
+ - **Free and Open Source.**
+ - **Great Community.**
+
+---
+
+Learning to Code is as Simple as ABC
+#Always
+#Be
+#Coding
+					</script>
+				</section>
+
+                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+                    <script type="text/template">
+# Programming Basics
+
+---
+
+##Math
+
+Python is good at math
+```
+>>> 1 + 1
+2
+>>> 2 - 3
+-1
+>>> (345 + 3) * 9
+3132
+```
+
+--
+
+##Math Operators
+ - ``+`` Addition
+ - ``–`` Subtraction
+ - ``*`` Multiplication
+ - ``/`` Division
+
+--
+
+##Exercise
+Try some math
+
+ - Does Python follow order of operation rules?
+ - Did division return the whole result?
+
+--
+
+We can use more than just numbers
+```python
+>>> "Buenos" + " dias"
+'Buenos dias'
+>>> 'or I can use single quotes'
+'or I can use single quotes'
+```
+
+--
+
+But what if we combine text and numbers?
+```
+>>> "I'll see you at " + 2
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str'
+and 'int' objects
+```
+
+					</script>
+				</section>
+
+                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+                    <script type="text/template">
+
+## Types
+ - Python is extremely picky and needs to classify everything before it
+knows what to do with it
+ - `“I’ll see you at “` is a String
+ - `2` is an Integer
+ - Use the `type()` function to tell what type an object is
+
+--
+
+## Exercise
+What is the result of the following:
+
+ - `type("Iowa Tech Chicks")`
+ - `type(6)`
+ - `type(6.1)`
+ - `type(6.0)`
+
+					</script>
+				</section>
+
+                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+                    <script type="text/template">
+
+## Functions
+
+ - What if you want to do something more complex than addition,
+subtraction, etc?
+ - Python gives us functions to do more complex operations
+ - Functions act on specific types
+
+--
+
+##Number Functions
+
+- `abs(n)`
+- `pow(n, e)`
+
+```
+>>> abs(-7)
+
+>>> pow(2, 8)
+```
+
+Hint: to figure out what a function does use the help function (e.g. `help(abs)`)
+
+--
+
+## String Methods
+Functions specific to the string object
+
+The string is the first argument
+
+- `.capitalize()`
+- `.replace()`
+- `.lower()`
+
+
+```
+>>> "iowa".capitalize()
+
+>>> "Iowa Tech Chicks".replace("Chicks","Peeps")
+
+>>> "MOAR PYTHON!!!".lower()
+```
+
+
+--
+
+## Exercise
+Try the following String methods
+
+- `title`
+- `strip`
+- `index`
+- `split`
+
+Hint: to figure out what amethod does use the help function (e.g. `help("f".strip`)
+
+--
+
+But functions only work on certain types
+```
+>>> pow("elephant", "brain")
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(
+s) for ** or pow(): 'str' and 'str'
+```
+
+					</script>
+				</section>
+
+                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+                    <script type="text/template">
+
+## Variables
+Keeping your code **DRY**
+
+**D**on’t **R**epeat **Y**ourself
+
+```
+>>> password =
+"SuperSecure"
+>>> password
+'SuperSecure'
+>>> num1 = 4
+>>> num1
+4
+>>> num2 = 1234.5
+>>> num2
+1234.5
+```
+
+--
+
+## Why variables are useful
+
+- Variable means “liable to change”
+- Variables change throughout the lifetime of our program
+- Without variables our programs wouldn’t be able to change
+- Setting a fixed value in a program is called ‘hard coding’
+
+--
+
+## Exercise
+
+Let’s throw a party
+
+```
+>>> party_budget = 1000
+>>> angel_round = 100000
+>>> party_budget + angel_round
+101000
+```
+
+What is your party budget now?
+
+--
+
+```
+>>> party_budget
+1000
+```
+
+We have to tell the party_budget it has a new value
+```
+>>> party_budget = party_budget + angel_round
+>>> party_budget
+101000
+```
+
+--
+
+The guestlist
+
+```
+>>> guestlist = "Peter June Shreek"
+>>> guestlist = guestlist + " Roberto"
+>>> guestlist
+'Peter June Shreek Roberto'
+```
+
+--
+
+Anything you can do to a ‘literal’ you can do
+to a variable
+```
+>>> startup = "my elephant brain"
+>>> startup.title()
+'My Elephant Brain'
+>>> revenue = -429376
+>>> abs(revenue)
+429376
+>>> revenue + 1000000
+570624
+```
+
+--
+
+But did the variable change?
+```
+>>> startup
+'my elephant brain'
+```
+
+The function returned a new value, it did not change the original value.
+
+--
+
+## Exercise
+- Try using the math operators we saw earlier on variables
+- `abs(n)`
+- `pow(n, x)`
+
+					</script>
+				</section>
+
+                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+                    <script type="text/template">
+
+## String formatting
+
+String Format method
+```
+>>> utensil =
+"spoon"
+>>> "My {} is too big".format(utensil)
+'My spoon is too big'
+>>> "The {0} came before the {1}".format('chicken', 'egg')
+'The chicken came before the egg'
+>>> "The {1} came before the {0}".format('chicken', 'egg')
+'The egg came before the chicken'
+>>> template = "The Jaguar F-Type has {}hp"
+>>> template.format(488)
+'The Jaguar F-Type has 488hp'
+```
+
+--
+
+## Exercises
+- Use multiple placeholders but only one argument
+- Round Pi to 3 decimals
+- Print centered text
+ - ' centered '
+- Print centered text and pad with plus signs
+ - '+++++++++++centered+++++++++++'
+- Look at http://docs.python.org/2/library/string.html#formatstrings
+for help
+
+					</script>
+				</section>
+
+                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+                    <script type="text/template">
+
+## Recap
+
+- Programs
+ - Programming languages are intermediates between computer and
+human language
+ - Programs are sets of instructions
+- Languages have ‘types’: string, integer, float, ...
+- Functions
+ - add behaviour
+ - most work on only one type
+- Variables
+ - save us from repeating ourselves
+ - don’t change until you tell them to
+ - Anything you can do to a literal you can do to a variable
+
+
+                    </script>
+                </section>
+
+                <!-- Code -->
+                <section data-markdown>
+                    <script type="text/template">
+```python
+x = 5
+if x > 2:
+print "I’m greater than two!"
+```
+                    </script>
+                </section>
+
+				<section>
+				<h1>Thank You!</h1>
+<p>Support Iowa Tech Chicks at <a href="http://www.iowatechchicks.com/support/">iowatechchicks.com/support</a></p>
+				</section>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+
