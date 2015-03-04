@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Tech Chicks CSS HTML</title>
+		<title>Intro to Python</title>
 
-		<meta name="description" content="HTML CSS Workshop for Iowa Tech Chicks">
+		<meta name="description" content="Intro to Python Workshop for Iowa Tech Chicks">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -16,10 +16,10 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css" id="theme">
 
-<!--  ITC theme -->
-<link rel="stylesheet" href="css/itc.css">
+		<!--  ITC theme -->
+		<link rel="stylesheet" href="css/itc.css">
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	    <link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -37,6 +37,7 @@
 
 	<body>
 
+</section>
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
@@ -45,49 +46,41 @@
 					<h1>Intro to Python Workshop</h1>
 					<p>
 						<small>
-							Presented by:  
-							Jennifer Reiber Kyle / <a href="http://twitter.com/jreiberkyl" target="blank">@jreiberkyle</a> and 
+							Presented by:  <br><br>
+							Jennifer Reiber Kyle / <a href="http://twitter.com/jreiberkyl" target="blank">@jreiberkyle</a> 
+							<br>and <br>
 							<a href="http://iowatechchicks.com" target="blank">Iowa Tech Chicks</a> / <a href="http://twitter.com/iowatechchicks" target="blank">@iowatechchicks</a>
 						</small>
 					</p>
 				</section>
-
                 <!-- Slides are separated by newline + three dashes + newline, vertical slides identical but two dashes -->
                 <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
                     <script type="text/template">
 
+## Slides Source
+
+Hosted on Github:
+
+https://github.com/jreiberkyle/intro-to-python
+
+---
+
 ## What you will achieve
-Develop a game in Python
+Learn the basics of programming
+
+Learn the basics of Python
+
+Develop a hangman game in Python
 
 ---
 
-## How we will get there
- - Getting Started
+## A Tale of 2 Parts
+
+#### Part 1: The Basics
+
  - Python Language
+ - Hello, World!
  - Programming Basics
-
----
-
-## Getting Started
-
-Setup
-
- - Online Interpreter
-  - [repl.it](http://repl.it/languages/Python)
-
- - Local Install
-  - **Python application:** Open terminal and type 'python'
-  - **Text Editor:** Sublime Text, Notepad++, Brackets, Vim ... 
-
---
-
-###Exercise
-Hello World
-
-```python
->>> print "Hello, world!"
-'Hello, world!'
-```
 
 ---
 
@@ -101,14 +94,14 @@ Hello World
 --
 
 ### Your computer speaks another language
-![binary code](./binary-503577_640.jpg)
+![binary code](./images/binary-503577_640.jpg)
 
 --
 
 ## Why python is great
 
  - **Easy to use:** It is closer to human language than to machine language.
- - **Powerful:** It’s used in academic research, Google and NASA.
+ - **Powerful:** It’s used in academic research, Google, NASA, and Planet Labs
  - **Runs Everywhere:** It’s platform independent. You can write your
 program on a Mac and run it on Windows.
  - **Free and Open Source.**
@@ -116,10 +109,65 @@ program on a Mac and run it on Windows.
 
 ---
 
-Learning to Code is as Simple as ABC
-#Always
-#Be
-#Coding
+## Hello, World!
+
+ ```python
+print "Hello, world!"
+ ```
+
+- Python Shell
+- Text Editor / Python Interpreter
+- Online Interpreter
+
+--
+
+## Python Shell
+
+- Open terminal (cmd-Space)
+- Type `python`
+
+```
+Python 2.7.8 (default, Oct 15 2014, 22:04:42) 
+[GCC 4.2.1 Compatible Apple LLVM 5.1 (clang-503.0.40)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+```
+
+ - `$` means you are in the terminal (not python)
+ - `>>>` means you are in python
+ - To leave intepreter, type `exit()` 
+
+--
+
+## Text Editor / Python Interpreter
+
+**Text Editor**: A program that opens text files and allows the user to edit and save them.
+
+(Different than a word processor)
+
+- **Built in**: vi
+- **3rd Party:** MacVim, Atom.io, Sublime Text, Notepad++, Brackets ...
+
+--
+
+## vi
+
+- 
+ - Open terminal (cmd-Space)
+ - Type `vi helloworld.py`
+ - Enter insert mode (i)
+ - Add command
+ - Exit insert mode (ESC)
+ - Save (:wq)
+ - Type `python helloworld.py`
+
+--
+
+## Online Interpreter
+
+- [repl.it](http://repl.it/languages/Python): (http://repl.it/languages/Python)
+ - right pane: Interactive
+ - left pane: Text editor (run using arrow)
 
 ---
 
@@ -131,6 +179,13 @@ Learning to Code is as Simple as ABC
 - [Variables](#/variables)
 - [I/O](#/io)
 - [conditional logic](#/conditional)
+
+--
+
+Learning to Code is as Simple as ABC
+#Always
+#Be
+#Coding
 					</script>
 				</section>
                 <section id="math" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
@@ -682,226 +737,14 @@ print "You've found the sweet spot"
 - Conditional logic
 					</script>
 				</section>
-                <section id="loops" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-## Loops
-
-- So far our code has run from top to bottom
-- Programs usually need to do something over and over agin
-- Computers don’t mind doing repetitive tasks
-
---
-
-## While Loop
-```
-#"while" something is true
-#perform an action
-while True:
-	print 'yep'
-	ret = raw_input('continue? (y/n)')
-	if 'y' == ret:
-		break
-```
-
---
-
-code within the loop may invalidate the condition
-```
-loop = True
-while loop:
-	print 'Are we there yet?'
-	loop = False
-print 'Done the loop'
-```
-
---
-
-To run a certain number of times we test a
-variable and increment within the loop
-```
-x = 1
-while x < 10:
-	print x
-	x += 1
-```
-
---
-
-## Exercise
-
-Print from 10 to 1
-
---
-
-## Excercise (for later)
-
-Guided Exercise
-
-- We’re going to write a game for the computer
-- The computer will pick a number and we have to guess it
-```
-from random import rand
-int x = randint(1,10)
-```
-- The user should know if they are too high or too low
-- We know how to ask for input
-- We know how to compare guesses
-- We want to give the user multiple chances
-
-					</script>
-				</section>
-                <section id="data-structures" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-## Lists
-- Lists are lists
-- That was useless
-- But seriously, they’re just a set of objects
-- Lists can hold strings, integers, floats, booleans, and anything else you
-can create
-
---
-
-## Creating Lists
-```
-mylist = [1,2,3,4]
-print mylist #[1, 2, 3, 4]
-companies = ['My Elephant Brain', 're:3D', 'Hacker You']
-print companies
-#['My Elephant Brain', 're:3D', 'Hacker You']
-kitchen_sink = [1 , 'a', True]
-print kitchen_sink
-#[1, 'a', True]
-```
-
---
-
-## Accessing Items in a List
-
-```
->>> companies[1]
-'re:3D'
->>> companies[-1]
-'Hacker You'
->>> companies[10]
-Traceback (most recent call last): File "<stdin>",
-line 1, in <module>
-IndexError: list index out of range
-```
-
---
-
-## Exercise
-- Using a list and a while loop, print the days of the week
-- ‘break’ the loop on Wednesday
-
---
-
-Modifying a List
-```
-#add and item
-l.append(5)
-print l
-#remove and item
-l.remove(3)
-print l
-# remove throws an error if the item does not exist
-l.remove(9)
-```
-
---
-
-
-## A Quick jump Back to Loops
-```
-# for loops make it easy to loop over a list
-for company in companies:
-print company
-# they are also useful for looping
-# a known number of times
-for i in range(1,10):
-	print i
-```
---
-
-## Exercise
-
-- Use a for loop to print the days of the week
-- Use a for loop to count from 10 to 1
- - Hint: by default `range()` increases by 1 each time, but you can give it a third
-argument to tell it the number to increment by each time
- - e.g. `range(0, 10, 2)`
-
-					</script>
-				</section>
-                <section id="hangman" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-# The Grand Finale
-## Hangman Game
-(credit: Python Programming for the Absolute Beginner)
-
---
-
-# Hangman
-
-- Let's make a hangman game using what we learned today.
-- But before you start coding away, it helps to think about what you're
-trying to do.
-- Remember, computers need specific instructions, so you need to
-break it down.
-- You can start by playing hangman on paper with each other.
-- Start with [hangman_draft.py](./examples/hangman_draft.py)
-
-					</script>
-				</section>
-                <section id="further" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-
-### You’re programmers now!
-- Sure there’s more to know
-- There’s always more to know
-- The trick is using what you know
-- http://www.pyschools.com/
-- http://www.djangobook.com/en/2.0/index.html
-- http://learnpythonthehardway.org/
-
---
-
-# Functions
-We put reusable code inside 'functions'
-
-functions.py
-```
-def add_two(a, b):
-return a + b
-ans = add_two(1, 2)
-print ans
-```
---
-
-Exercise
-
-Write functions to do the following
-
-- Multiply two numbers
-- Combine an int and a string
-- Print the sequence of a given number, down to zero
- - 5, 4, 3, 2, 1, 0
-
---
-
-# Modules
-Python code is reusable by other code
-start python in the same folder as functions.py
-```
-from functions import add_two
-print add_two(1,2)
-```
-                    </script>
-                </section>
-
 				<section>
 				<h1>Thank You!</h1>
+				<br>
 <p>Support Iowa Tech Chicks at <a href="http://www.iowatechchicks.com/support/">iowatechchicks.com/support</a></p>
+<br>
+<p>Connect with me  on Twitter (@jreiberkyle) or Github (github/jreiberkyle)</p>
+<br>
+<p>Stick around for <a href="part2.html">Part2: Advanced Control</a></p>
 				</section>
 
 		</div>
@@ -926,7 +769,8 @@ print add_two(1,2)
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return true; }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
