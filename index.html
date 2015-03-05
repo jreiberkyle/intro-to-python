@@ -517,14 +517,20 @@ String Format method
 ---
 
 ## Exercises
+
 - Use multiple placeholders but only one argument
-- Round Pi to 3 decimals
 - Print centered text
  - ' centered '
 - Print centered text and pad with plus signs
  - '+++++++++++centered+++++++++++'
 - Look at http://docs.python.org/2/library/string.html#formatstrings
 for help
+
+---
+
+```
+
+```
 
 ---
 
@@ -581,6 +587,22 @@ print #the number of remaining tickets
 ```
 
 ###SAVE FOR LATER
+
+---
+
+```
+num_tickets = 8
+
+tickets_requested = raw_input("How many tickets do you want?\n")
+tickets_requested = int(tickets_requested)
+
+print "You've asked for {} ticket(s)".format(tickets_requested)
+# deduct the tickets sold from available tickets
+num_tickets = num_tickets - tickets_requested
+
+#the number of remaining tickets
+print "There are {} ticket(s) left".format(num_tickets)
+```
 
 ---
 
@@ -670,6 +692,27 @@ else:
 ### A Ticketing App (cont.)
 Stop the user from buying tickets if they ask for more than are
 available
+
+---
+
+```
+
+num_tickets = 8
+
+tickets_requested = raw_input("How many tickets do you want?\n")
+tickets_requested = int(tickets_requested)
+
+print "You've asked for {} ticket(s)".format(tickets_requested)
+# deduct the tickets sold from available tickets 
+if tickets_requested > num_tickets:
+    print "We're sorry. We don't have that many tickets"
+else:
+    num_tickets = num_tickets - tickets_requested
+    print "Purchase successful"
+
+#the number of remaining tickets
+print "There are {} ticket(s) left".format(num_tickets)
+```
 
 ---
 
