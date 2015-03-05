@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Tech Chicks CSS HTML</title>
+		<title>Intro to Python</title>
 
-		<meta name="description" content="HTML CSS Workshop for Iowa Tech Chicks">
+		<meta name="description" content="Intro to Python Workshop for Iowa Tech Chicks">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -16,10 +16,10 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css" id="theme">
 
-<!--  ITC theme -->
-<link rel="stylesheet" href="css/itc.css">
+		<!--  ITC theme -->
+		<link rel="stylesheet" href="css/itc.css">
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	    <link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -37,6 +37,7 @@
 
 	<body>
 
+</section>
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
@@ -45,49 +46,43 @@
 					<h1>Intro to Python Workshop</h1>
 					<p>
 						<small>
-							Presented by:  
-							Jennifer Reiber Kyle / <a href="http://twitter.com/jreiberkyl" target="blank">@jreiberkyle</a> and 
+							Presented by:  <br><br>
+							Jennifer Reiber Kyle / <a href="http://twitter.com/jreiberkyl" target="blank">@jreiberkyle</a> 
+							<br>and <br>
 							<a href="http://iowatechchicks.com" target="blank">Iowa Tech Chicks</a> / <a href="http://twitter.com/iowatechchicks" target="blank">@iowatechchicks</a>
 						</small>
 					</p>
 				</section>
-
                 <!-- Slides are separated by newline + three dashes + newline, vertical slides identical but two dashes -->
                 <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
                     <script type="text/template">
 
-## What you will achieve
-Develop a game in Python
+## Slides Source
+
+Hosted on Github:
+
+https://github.com/jreiberkyle/intro-to-python
 
 ---
 
-## How we will get there
- - Getting Started
+## What you will achieve
+Learn the basics of programming
+
+Learn the basics of Python
+
+Develop a hangman game in Python
+
+---
+
+## A Tale of 2 Parts
+
+#### Part 1: The Basics
+
  - Python Language
+ - Hello, World!
  - Programming Basics
 
----
-
-## Getting Started
-
-Setup
-
- - Online Interpreter
-  - [repl.it](http://repl.it/languages/Python)
-
- - Local Install
-  - **Python application:** Open terminal and type 'python'
-  - **Text Editor:** Sublime Text, Notepad++, Brackets, Vim ... 
-
---
-
-###Exercise
-Hello World
-
-```python
->>> print "Hello, world!"
-'Hello, world!'
-```
+#### Part 2: Advanced Control
 
 ---
 
@@ -98,21 +93,95 @@ Hello World
  - What is a programming language?
  - Why do we need one?
 
---
+---
 
 ### Your computer speaks another language
-![binary code](./binary-503577_640.jpg)
+![binary code](./images/binary-503577_640.jpg)
 
---
+---
 
 ## Why python is great
 
  - **Easy to use:** It is closer to human language than to machine language.
- - **Powerful:** It’s used in academic research, Google and NASA.
+ - **Powerful:** It’s used in academic research, Google, NASA, and Planet Labs
  - **Runs Everywhere:** It’s platform independent. You can write your
 program on a Mac and run it on Windows.
  - **Free and Open Source.**
  - **Great Community.**
+
+---
+
+## Hello, World!
+
+ ```python
+print "Hello, world!"
+ ```
+
+- Python Shell
+- Text Editor / Python Interpreter
+- Online Interpreter
+
+---
+
+## Python Shell
+
+- Open terminal (cmd-Space)
+- Type `python`
+
+```
+Python 2.7.8 (default, Oct 15 2014, 22:04:42) 
+[GCC 4.2.1 Compatible Apple LLVM 5.1 (clang-503.0.40)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+```
+
+ - `$` means you are in the terminal (not python)
+ - `>>>` means you are in python
+ - To leave intepreter, type `exit()` 
+
+---
+
+## Text Editor / Python Interpreter
+
+**Text Editor**: A program that opens text files and allows the user to edit and save them.
+
+(Different than a word processor)
+
+- **Built in**: vi
+- **3rd Party:** MacVim, Atom.io, Sublime Text, Notepad++, Brackets ...
+- **My Favorite:** Sublime (lots of plugins, fuzzy search)
+
+---
+
+## vi
+
+- 
+ - Open terminal (cmd-Space)
+ - Type `vi helloworld.py`
+ - Enter insert mode (i)
+ - Add command
+ - Exit insert mode (ESC)
+ - Save (:wq)
+ - Type `python helloworld.py`
+
+---
+
+## Online Interpreter
+
+- [repl.it](http://repl.it/languages/Python): (http://repl.it/languages/Python)
+ - right pane: Interactive
+ - left pane: Text editor (run using arrow)
+
+---
+
+# Programming Basics
+
+- Math
+- Types
+- Built-in Functions
+- Variables
+- I/O
+- Conditional Logic
 
 ---
 
@@ -123,18 +192,6 @@ Learning to Code is as Simple as ABC
 
 ---
 
-# Programming Basics
-
-- [Math](#/math)
-- [Types](#/types)
-- [Functions](#/functions)
-- [Variables](#/variables)
-- [I/O](#/io)
-- [conditional logic](#/conditional)
-					</script>
-				</section>
-                <section id="math" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
 ## Math
 
 Python is good at math
@@ -148,7 +205,7 @@ Python is good at math
 3132
 ```
 
---
+---
 
 ## Math Operators
 
@@ -157,7 +214,7 @@ Python is good at math
  - ``*`` Multiplication
  - ``/`` Division
 
---
+---
 
 ##Exercise
 Try some math
@@ -165,7 +222,7 @@ Try some math
  - Does Python follow order of operation rules?
  - Did division return the whole result?
 
---
+---
 
 We can use more than just numbers
 
@@ -176,7 +233,7 @@ We can use more than just numbers
 'or I can use single quotes'
 ```
 
---
+---
 
 But what if we combine text and numbers?
 
@@ -187,10 +244,8 @@ File "<stdin>", line 1, in <module>
 TypeError: cannot concatenate 'str'
 and 'int' objects
 ```
-					</script>
-				</section>
-                <section id="types" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+
+---
 
 ## Types
  - Python is extremely picky and needs to classify everything before it
@@ -199,7 +254,7 @@ knows what to do with it
  - `2` is an Integer
  - Use the `type()` function to tell what type an object is
 
---
+---
 
 ## Exercise
 What is the result of the following:
@@ -209,7 +264,7 @@ What is the result of the following:
  - `type(6.1)`
  - `type(6.0)`
 
---
+---
 
 ## Type casting 
 ```
@@ -218,18 +273,17 @@ What is the result of the following:
 >>> 1 + int("2")
 3
 ```
-					</script>
-				</section>
-                <section id="functions" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-## Functions
+
+---
+
+## Built-in Functions
 
  - What if you want to do something more complex than addition,
 subtraction, etc?
  - Python gives us functions to do more complex operations
  - Functions act on specific types
 
---
+---
 
 ## Number Functions
 
@@ -244,7 +298,7 @@ subtraction, etc?
 
 Hint: to figure out what a function does use the help function (e.g. `help(abs)`)
 
---
+---
 
 ## String Methods
 Functions specific to the string object
@@ -264,7 +318,7 @@ The string is the first argument
 >>> "MOAR PYTHON!!!".lower()
 ```
 
---
+---
 
 ## Exercise
 Try the following String methods
@@ -276,7 +330,7 @@ Try the following String methods
 
 Hint: to figure out what amethod does use the help function (e.g. `help("f".strip`)
 
---
+---
 
 But functions only work on certain types
 ```
@@ -287,10 +341,7 @@ TypeError: unsupported operand type(
 s) for ** or pow(): 'str' and 'str'
 ```
 
-					</script>
-				</section>
-                <section id="variables" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
 
 ## Variables
 Keeping your code **DRY**
@@ -310,7 +361,7 @@ Keeping your code **DRY**
 1234.5
 ```
 
---
+---
 
 ## Why variables are useful
 
@@ -319,7 +370,7 @@ Keeping your code **DRY**
 - Without variables our programs wouldn’t be able to change
 - Setting a fixed value in a program is called ‘hard coding’
 
---
+---
 
 ## Exercise
 
@@ -334,7 +385,7 @@ Let’s throw a party
 
 What is your party budget now?
 
---
+---
 
 ```
 >>> party_budget
@@ -349,7 +400,7 @@ We have to tell the party_budget it has a new value
 101000
 ```
 
---
+---
 
 The guestlist
 
@@ -360,7 +411,7 @@ The guestlist
 'Peter June Shreek Roberto'
 ```
 
---
+---
 
 Anything you can do to a ‘literal’ you can do
 to a variable
@@ -375,7 +426,7 @@ to a variable
 570624
 ```
 
---
+---
 
 But did the variable change?
 ```
@@ -385,22 +436,32 @@ But did the variable change?
 
 The function returned a new value, it did not change the original value.
 
---
+---
 
 ## Exercise
 - Try using the math operators we saw earlier on variables
 - `abs(n)`
 - `pow(n, x)`
 
-					</script>
-				</section>
-                <section id="io" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
+## Comments
+
+- Python ignores anything after the # character
+
+```
+# This is a comment
+print 'Hello World' # so is this
+# print("this won't be printed")
+```
+
+---
 
 ## I/O - Asking for Input
 
+`raw_input()` (`input()` in Python3)
 ```
-#raw input prompts the user
+#raw input prompts the user 
 raw_input("Please enter your name:\n")
 #store the result in a variable
 my_name = raw_input("Please enter your name:\n")
@@ -408,7 +469,7 @@ my_name = raw_input("Please enter your name:\n")
 my_age = int(raw_input("How old are you?\n"))
 ```
 
---
+---
 
 ## I/O - Printing
 
@@ -417,15 +478,15 @@ my_age = int(raw_input("How old are you?\n"))
 >>> print party_budget
 ```
 
---
+---
 
 ## Special Characters
 
-- \n
-- \
-- \’
-- \\
-- \t 
+- `\n`
+- `\`
+- `\’`
+- `\\`
+- `\t` 
 
 ```
 >>> print "215 Spadina \nToronto \nOntario"
@@ -434,7 +495,7 @@ Toronto
 Ontario
 ```
 
---
+---
 
 ## String formatting
 
@@ -453,11 +514,11 @@ String Format method
 'The Jaguar F-Type has 488hp'
 ```
 
---
+---
 
 ## Exercises
+
 - Use multiple placeholders but only one argument
-- Round Pi to 3 decimals
 - Print centered text
  - ' centered '
 - Print centered text and pad with plus signs
@@ -465,10 +526,14 @@ String Format method
 - Look at http://docs.python.org/2/library/string.html#formatstrings
 for help
 
-					</script>
-				</section>
-                <section id="recap" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
+```
+
+```
+
+---
+
 ## Recap
 
 - Programs
@@ -476,29 +541,24 @@ for help
 human language
  - Programs are sets of instructions
 - Languages have ‘types’: string, integer, float, ...
-- Functions
+- Built-in Functions
  - add behaviour
  - most work on only one type
+
+---
+
+## Recap
+
 - Variables
  - save us from repeating ourselves
  - don’t change until you tell them to
  - Anything you can do to a literal you can do to a variable
+- I/O
+ - input: use raw_input() / input()
+ - output: use print() and format()
 
-					</script>
-				</section>
-                <section id="comments" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-## Comments
-- Python ignores anything after the # character
-```
-# This is a comment
-print 'Hello World' # so is this
-# print("this won't be printed")
-```
-					</script>
-				</section>
-                <section id="ex-ticket" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
 ## Exercise
 ### A Ticket App
 Peter’s Python Prognostications
@@ -509,9 +569,13 @@ Peter’s Python Prognostications
  3. We print out that number
  4. We show the user how many tickets are left
 
---
+---
 
-tickets_begin.py
+- Start with 8 tickets
+- Ask the user how many they want
+- Print out that number
+- Show the user how many tickets are left
+
 ```
 num_tickets = 8
 
@@ -522,9 +586,27 @@ print "You've asked for {} ticket(s)".format(tickets_requested)
 print #the number of remaining tickets
 ```
 
---
+###SAVE FOR LATER
 
-Issues you may have had
+---
+
+```
+num_tickets = 8
+
+tickets_requested = raw_input("How many tickets do you want?\n")
+tickets_requested = int(tickets_requested)
+
+print "You've asked for {} ticket(s)".format(tickets_requested)
+# deduct the tickets sold from available tickets
+num_tickets = num_tickets - tickets_requested
+
+#the number of remaining tickets
+print "There are {} ticket(s) left".format(num_tickets)
+```
+
+---
+
+###Issues you may have had
 
 - raw_input always returns a string
  - You’ll need to cast it to an int
@@ -534,10 +616,7 @@ Issues you may have had
  - You have to explicitly update the number
  - This is called tracking ‘state’
 
-					</script>
-				</section>
-                <section id="conditional" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
 
 ## Conditional Logic
 
@@ -546,7 +625,7 @@ Issues you may have had
 - They jump around according to rules
 - One way to specify those rules is to use conditions
 
---
+---
 
 ## Conditional Logic
 
@@ -561,19 +640,19 @@ Issues you may have had
 - Less than: ``<``
 - Less than or equal to: ``<=``
 
---
+---
 
 ## Exercise
 - In the Python shell use all the operators on the previous slide
 
---
+---
 
 ## Boolean types
 
 - Either true or false
 - Useful when making a decision
 
---
+---
 
 if statement
 ```
@@ -581,7 +660,7 @@ if 1==1:
 	print "I am the walrus!"
 ```
 
---
+---
 
 else Statement
 ```
@@ -591,7 +670,7 @@ else:
 	print "So the else clause is executed"
 ```
 
---
+---
 
 elif statement
 ```
@@ -607,17 +686,35 @@ else:
 	print "Early to bed and early to rise."
 ```
 
---
+---
 
 ## Exercise
-### A Ticketing App
+### A Ticketing App (cont.)
 Stop the user from buying tickets if they ask for more than are
 available
 
-					</script>
-				</section>
-                <section id="ex-color" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
+```
+
+num_tickets = 8
+
+tickets_requested = raw_input("How many tickets do you want?\n")
+tickets_requested = int(tickets_requested)
+
+print "You've asked for {} ticket(s)".format(tickets_requested)
+# deduct the tickets sold from available tickets 
+if tickets_requested > num_tickets:
+    print "We're sorry. We don't have that many tickets"
+else:
+    num_tickets = num_tickets - tickets_requested
+    print "Purchase successful"
+
+#the number of remaining tickets
+print "There are {} ticket(s) left".format(num_tickets)
+```
+
+---
 
 ## Exercise
 ###Color
@@ -629,7 +726,7 @@ Green
 I like turtles
 ```
 
---
+---
 
 ## Color
 
@@ -637,40 +734,37 @@ I like turtles
 fav = raw_input('What is your favourite color?\n')
 fav_lower = fav.lower()
 if fav_lower == 'green':
-print 'I like turtles'
+    print 'I like turtles'
 elif fav_lower == 'blue':
-print 'Like the sky'
+    print 'Like the sky'
 elif fav_lower == 'purple':
-print 'My favourite ice cream when I was young was called Purple People Eater'
+    print 'My favourite ice cream when I was young was called Purple People Eater'
 else:
-print "{} is my favourite too.".format(fav)
+    print "{} is my favourite too.".format(fav)
 ```
-					</script>
-				</section>
-                <section id="ex-andor" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+
+---
+
 ## Exercise
 ###And/Or
 - Write a program that prints a string if the input is less than 10 or
 greater than 20
 - Do the same thing for greater than 10 and less than 20
 
---
+---
 
 ###and/or
 ```
 input = raw_input("Give me a number: ")
 input = int(input)
 if input < 10 or input > 20:
-print 'That\'s a good number'
+    print 'That\'s a good number'
 if input > 10 and input < 20:
-print "You've found the sweet spot"
+    print "You've found the sweet spot"
 ```
 
-					</script>
-				</section>
-                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
 ## What we’ve covered
 
 - Programs
@@ -682,226 +776,14 @@ print "You've found the sweet spot"
 - Conditional logic
 					</script>
 				</section>
-                <section id="loops" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-## Loops
-
-- So far our code has run from top to bottom
-- Programs usually need to do something over and over agin
-- Computers don’t mind doing repetitive tasks
-
---
-
-## While Loop
-```
-#"while" something is true
-#perform an action
-while True:
-	print 'yep'
-	ret = raw_input('continue? (y/n)')
-	if 'y' == ret:
-		break
-```
-
---
-
-code within the loop may invalidate the condition
-```
-loop = True
-while loop:
-	print 'Are we there yet?'
-	loop = False
-print 'Done the loop'
-```
-
---
-
-To run a certain number of times we test a
-variable and increment within the loop
-```
-x = 1
-while x < 10:
-	print x
-	x += 1
-```
-
---
-
-## Exercise
-
-Print from 10 to 1
-
---
-
-## Excercise (for later)
-
-Guided Exercise
-
-- We’re going to write a game for the computer
-- The computer will pick a number and we have to guess it
-```
-from random import rand
-int x = randint(1,10)
-```
-- The user should know if they are too high or too low
-- We know how to ask for input
-- We know how to compare guesses
-- We want to give the user multiple chances
-
-					</script>
-				</section>
-                <section id="data-structures" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-## Lists
-- Lists are lists
-- That was useless
-- But seriously, they’re just a set of objects
-- Lists can hold strings, integers, floats, booleans, and anything else you
-can create
-
---
-
-## Creating Lists
-```
-mylist = [1,2,3,4]
-print mylist #[1, 2, 3, 4]
-companies = ['My Elephant Brain', 're:3D', 'Hacker You']
-print companies
-#['My Elephant Brain', 're:3D', 'Hacker You']
-kitchen_sink = [1 , 'a', True]
-print kitchen_sink
-#[1, 'a', True]
-```
-
---
-
-## Accessing Items in a List
-
-```
->>> companies[1]
-'re:3D'
->>> companies[-1]
-'Hacker You'
->>> companies[10]
-Traceback (most recent call last): File "<stdin>",
-line 1, in <module>
-IndexError: list index out of range
-```
-
---
-
-## Exercise
-- Using a list and a while loop, print the days of the week
-- ‘break’ the loop on Wednesday
-
---
-
-Modifying a List
-```
-#add and item
-l.append(5)
-print l
-#remove and item
-l.remove(3)
-print l
-# remove throws an error if the item does not exist
-l.remove(9)
-```
-
---
-
-
-## A Quick jump Back to Loops
-```
-# for loops make it easy to loop over a list
-for company in companies:
-print company
-# they are also useful for looping
-# a known number of times
-for i in range(1,10):
-	print i
-```
---
-
-## Exercise
-
-- Use a for loop to print the days of the week
-- Use a for loop to count from 10 to 1
- - Hint: by default `range()` increases by 1 each time, but you can give it a third
-argument to tell it the number to increment by each time
- - e.g. `range(0, 10, 2)`
-
-					</script>
-				</section>
-                <section id="hangman" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-# The Grand Finale
-## Hangman Game
-(credit: Python Programming for the Absolute Beginner)
-
---
-
-# Hangman
-
-- Let's make a hangman game using what we learned today.
-- But before you start coding away, it helps to think about what you're
-trying to do.
-- Remember, computers need specific instructions, so you need to
-break it down.
-- You can start by playing hangman on paper with each other.
-- Start with [hangman_draft.py](./examples/hangman_draft.py)
-
-					</script>
-				</section>
-                <section id="further" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-
-### You’re programmers now!
-- Sure there’s more to know
-- There’s always more to know
-- The trick is using what you know
-- http://www.pyschools.com/
-- http://www.djangobook.com/en/2.0/index.html
-- http://learnpythonthehardway.org/
-
---
-
-# Functions
-We put reusable code inside 'functions'
-
-functions.py
-```
-def add_two(a, b):
-return a + b
-ans = add_two(1, 2)
-print ans
-```
---
-
-Exercise
-
-Write functions to do the following
-
-- Multiply two numbers
-- Combine an int and a string
-- Print the sequence of a given number, down to zero
- - 5, 4, 3, 2, 1, 0
-
---
-
-# Modules
-Python code is reusable by other code
-start python in the same folder as functions.py
-```
-from functions import add_two
-print add_two(1,2)
-```
-                    </script>
-                </section>
-
 				<section>
 				<h1>Thank You!</h1>
+				<br>
 <p>Support Iowa Tech Chicks at <a href="http://www.iowatechchicks.com/support/">iowatechchicks.com/support</a></p>
+<br>
+<p>Connect with me  on Twitter (@jreiberkyle) or Github (github/jreiberkyle)</p>
+<br>
+<p>Stick around for <a href="part2.html">Part 2: Advanced Control</a></p>
 				</section>
 
 		</div>
@@ -926,7 +808,8 @@ print add_two(1,2)
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return true; }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
