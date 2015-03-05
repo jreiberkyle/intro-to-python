@@ -82,6 +82,8 @@ Develop a hangman game in Python
  - Hello, World!
  - Programming Basics
 
+#### Part 2: Advanced Control
+
 ---
 
 ## Python Language
@@ -91,12 +93,12 @@ Develop a hangman game in Python
  - What is a programming language?
  - Why do we need one?
 
---
+---
 
 ### Your computer speaks another language
 ![binary code](./images/binary-503577_640.jpg)
 
---
+---
 
 ## Why python is great
 
@@ -119,7 +121,7 @@ print "Hello, world!"
 - Text Editor / Python Interpreter
 - Online Interpreter
 
---
+---
 
 ## Python Shell
 
@@ -137,7 +139,7 @@ Type "help", "copyright", "credits" or "license" for more information.
  - `>>>` means you are in python
  - To leave intepreter, type `exit()` 
 
---
+---
 
 ## Text Editor / Python Interpreter
 
@@ -147,8 +149,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 - **Built in**: vi
 - **3rd Party:** MacVim, Atom.io, Sublime Text, Notepad++, Brackets ...
+- **My Favorite:** Sublime (lots of plugins, fuzzy search)
 
---
+---
 
 ## vi
 
@@ -161,7 +164,7 @@ Type "help", "copyright", "credits" or "license" for more information.
  - Save (:wq)
  - Type `python helloworld.py`
 
---
+---
 
 ## Online Interpreter
 
@@ -173,23 +176,22 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 # Programming Basics
 
-- [Math](#/math)
-- [Types](#/types)
-- [Functions](#/functions)
-- [Variables](#/variables)
-- [I/O](#/io)
-- [conditional logic](#/conditional)
+- Math
+- Types
+- Built-in Functions
+- Variables
+- I/O
+- Conditional Logic
 
---
+---
 
 Learning to Code is as Simple as ABC
 #Always
 #Be
 #Coding
-					</script>
-				</section>
-                <section id="math" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+
+---
+
 ## Math
 
 Python is good at math
@@ -203,7 +205,7 @@ Python is good at math
 3132
 ```
 
---
+---
 
 ## Math Operators
 
@@ -212,7 +214,7 @@ Python is good at math
  - ``*`` Multiplication
  - ``/`` Division
 
---
+---
 
 ##Exercise
 Try some math
@@ -220,7 +222,7 @@ Try some math
  - Does Python follow order of operation rules?
  - Did division return the whole result?
 
---
+---
 
 We can use more than just numbers
 
@@ -231,7 +233,7 @@ We can use more than just numbers
 'or I can use single quotes'
 ```
 
---
+---
 
 But what if we combine text and numbers?
 
@@ -242,10 +244,8 @@ File "<stdin>", line 1, in <module>
 TypeError: cannot concatenate 'str'
 and 'int' objects
 ```
-					</script>
-				</section>
-                <section id="types" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+
+---
 
 ## Types
  - Python is extremely picky and needs to classify everything before it
@@ -254,7 +254,7 @@ knows what to do with it
  - `2` is an Integer
  - Use the `type()` function to tell what type an object is
 
---
+---
 
 ## Exercise
 What is the result of the following:
@@ -264,7 +264,7 @@ What is the result of the following:
  - `type(6.1)`
  - `type(6.0)`
 
---
+---
 
 ## Type casting 
 ```
@@ -273,18 +273,17 @@ What is the result of the following:
 >>> 1 + int("2")
 3
 ```
-					</script>
-				</section>
-                <section id="functions" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-## Functions
+
+---
+
+## Built-in Functions
 
  - What if you want to do something more complex than addition,
 subtraction, etc?
  - Python gives us functions to do more complex operations
  - Functions act on specific types
 
---
+---
 
 ## Number Functions
 
@@ -299,7 +298,7 @@ subtraction, etc?
 
 Hint: to figure out what a function does use the help function (e.g. `help(abs)`)
 
---
+---
 
 ## String Methods
 Functions specific to the string object
@@ -319,7 +318,7 @@ The string is the first argument
 >>> "MOAR PYTHON!!!".lower()
 ```
 
---
+---
 
 ## Exercise
 Try the following String methods
@@ -331,7 +330,7 @@ Try the following String methods
 
 Hint: to figure out what amethod does use the help function (e.g. `help("f".strip`)
 
---
+---
 
 But functions only work on certain types
 ```
@@ -342,10 +341,7 @@ TypeError: unsupported operand type(
 s) for ** or pow(): 'str' and 'str'
 ```
 
-					</script>
-				</section>
-                <section id="variables" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
 
 ## Variables
 Keeping your code **DRY**
@@ -365,7 +361,7 @@ Keeping your code **DRY**
 1234.5
 ```
 
---
+---
 
 ## Why variables are useful
 
@@ -374,7 +370,7 @@ Keeping your code **DRY**
 - Without variables our programs wouldn’t be able to change
 - Setting a fixed value in a program is called ‘hard coding’
 
---
+---
 
 ## Exercise
 
@@ -389,7 +385,7 @@ Let’s throw a party
 
 What is your party budget now?
 
---
+---
 
 ```
 >>> party_budget
@@ -404,7 +400,7 @@ We have to tell the party_budget it has a new value
 101000
 ```
 
---
+---
 
 The guestlist
 
@@ -415,7 +411,7 @@ The guestlist
 'Peter June Shreek Roberto'
 ```
 
---
+---
 
 Anything you can do to a ‘literal’ you can do
 to a variable
@@ -430,7 +426,7 @@ to a variable
 570624
 ```
 
---
+---
 
 But did the variable change?
 ```
@@ -440,22 +436,32 @@ But did the variable change?
 
 The function returned a new value, it did not change the original value.
 
---
+---
 
 ## Exercise
 - Try using the math operators we saw earlier on variables
 - `abs(n)`
 - `pow(n, x)`
 
-					</script>
-				</section>
-                <section id="io" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
+## Comments
+
+- Python ignores anything after the # character
+
+```
+# This is a comment
+print 'Hello World' # so is this
+# print("this won't be printed")
+```
+
+---
 
 ## I/O - Asking for Input
 
+`raw_input()` (`input()` in Python3)
 ```
-#raw input prompts the user
+#raw input prompts the user 
 raw_input("Please enter your name:\n")
 #store the result in a variable
 my_name = raw_input("Please enter your name:\n")
@@ -463,7 +469,7 @@ my_name = raw_input("Please enter your name:\n")
 my_age = int(raw_input("How old are you?\n"))
 ```
 
---
+---
 
 ## I/O - Printing
 
@@ -472,15 +478,15 @@ my_age = int(raw_input("How old are you?\n"))
 >>> print party_budget
 ```
 
---
+---
 
 ## Special Characters
 
-- \n
-- \
-- \’
-- \\
-- \t 
+- `\n`
+- `\`
+- `\’`
+- `\\`
+- `\t` 
 
 ```
 >>> print "215 Spadina \nToronto \nOntario"
@@ -489,7 +495,7 @@ Toronto
 Ontario
 ```
 
---
+---
 
 ## String formatting
 
@@ -508,7 +514,7 @@ String Format method
 'The Jaguar F-Type has 488hp'
 ```
 
---
+---
 
 ## Exercises
 - Use multiple placeholders but only one argument
@@ -520,10 +526,8 @@ String Format method
 - Look at http://docs.python.org/2/library/string.html#formatstrings
 for help
 
-					</script>
-				</section>
-                <section id="recap" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
 ## Recap
 
 - Programs
@@ -531,29 +535,24 @@ for help
 human language
  - Programs are sets of instructions
 - Languages have ‘types’: string, integer, float, ...
-- Functions
+- Built-in Functions
  - add behaviour
  - most work on only one type
+
+---
+
+## Recap
+
 - Variables
  - save us from repeating ourselves
  - don’t change until you tell them to
  - Anything you can do to a literal you can do to a variable
+- I/O
+ - input: use raw_input() / input()
+ - output: use print() and format()
 
-					</script>
-				</section>
-                <section id="comments" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-## Comments
-- Python ignores anything after the # character
-```
-# This is a comment
-print 'Hello World' # so is this
-# print("this won't be printed")
-```
-					</script>
-				</section>
-                <section id="ex-ticket" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
 ## Exercise
 ### A Ticket App
 Peter’s Python Prognostications
@@ -564,9 +563,13 @@ Peter’s Python Prognostications
  3. We print out that number
  4. We show the user how many tickets are left
 
---
+---
 
-tickets_begin.py
+- Start with 8 tickets
+- Ask the user how many they want
+- Print out that number
+- Show the user how many tickets are left
+
 ```
 num_tickets = 8
 
@@ -577,9 +580,11 @@ print "You've asked for {} ticket(s)".format(tickets_requested)
 print #the number of remaining tickets
 ```
 
---
+###SAVE FOR LATER
 
-Issues you may have had
+---
+
+###Issues you may have had
 
 - raw_input always returns a string
  - You’ll need to cast it to an int
@@ -589,10 +594,7 @@ Issues you may have had
  - You have to explicitly update the number
  - This is called tracking ‘state’
 
-					</script>
-				</section>
-                <section id="conditional" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
 
 ## Conditional Logic
 
@@ -601,7 +603,7 @@ Issues you may have had
 - They jump around according to rules
 - One way to specify those rules is to use conditions
 
---
+---
 
 ## Conditional Logic
 
@@ -616,19 +618,19 @@ Issues you may have had
 - Less than: ``<``
 - Less than or equal to: ``<=``
 
---
+---
 
 ## Exercise
 - In the Python shell use all the operators on the previous slide
 
---
+---
 
 ## Boolean types
 
 - Either true or false
 - Useful when making a decision
 
---
+---
 
 if statement
 ```
@@ -636,7 +638,7 @@ if 1==1:
 	print "I am the walrus!"
 ```
 
---
+---
 
 else Statement
 ```
@@ -646,7 +648,7 @@ else:
 	print "So the else clause is executed"
 ```
 
---
+---
 
 elif statement
 ```
@@ -662,17 +664,14 @@ else:
 	print "Early to bed and early to rise."
 ```
 
---
+---
 
 ## Exercise
-### A Ticketing App
+### A Ticketing App (cont.)
 Stop the user from buying tickets if they ask for more than are
 available
 
-					</script>
-				</section>
-                <section id="ex-color" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
 
 ## Exercise
 ###Color
@@ -684,7 +683,7 @@ Green
 I like turtles
 ```
 
---
+---
 
 ## Color
 
@@ -692,40 +691,37 @@ I like turtles
 fav = raw_input('What is your favourite color?\n')
 fav_lower = fav.lower()
 if fav_lower == 'green':
-print 'I like turtles'
+    print 'I like turtles'
 elif fav_lower == 'blue':
-print 'Like the sky'
+    print 'Like the sky'
 elif fav_lower == 'purple':
-print 'My favourite ice cream when I was young was called Purple People Eater'
+    print 'My favourite ice cream when I was young was called Purple People Eater'
 else:
-print "{} is my favourite too.".format(fav)
+    print "{} is my favourite too.".format(fav)
 ```
-					</script>
-				</section>
-                <section id="ex-andor" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+
+---
+
 ## Exercise
 ###And/Or
 - Write a program that prints a string if the input is less than 10 or
 greater than 20
 - Do the same thing for greater than 10 and less than 20
 
---
+---
 
 ###and/or
 ```
 input = raw_input("Give me a number: ")
 input = int(input)
 if input < 10 or input > 20:
-print 'That\'s a good number'
+    print 'That\'s a good number'
 if input > 10 and input < 20:
-print "You've found the sweet spot"
+    print "You've found the sweet spot"
 ```
 
-					</script>
-				</section>
-                <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
 ## What we’ve covered
 
 - Programs
@@ -744,7 +740,7 @@ print "You've found the sweet spot"
 <br>
 <p>Connect with me  on Twitter (@jreiberkyle) or Github (github/jreiberkyle)</p>
 <br>
-<p>Stick around for <a href="part2.html">Part2: Advanced Control</a></p>
+<p>Stick around for <a href="part2.html">Part 2: Advanced Control</a></p>
 				</section>
 
 		</div>

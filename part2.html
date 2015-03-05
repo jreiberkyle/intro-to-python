@@ -42,9 +42,10 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+			<div class="slides">
 				<section>
 					<h1>Intro to Python Workshop</h1>
-					<p><br>
+					<p>
 						<small>
 							Presented by:  <br><br>
 							Jennifer Reiber Kyle / <a href="http://twitter.com/jreiberkyl" target="blank">@jreiberkyle</a> 
@@ -72,20 +73,18 @@
  - Functions
  - Modules
 
-					</script>
-				</section>
-                <section id="loops" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
 ## Loops
 
 - So far our code has run from top to bottom
 - Programs usually need to do something over and over agin
 - Computers don’t mind doing repetitive tasks
 
---
+---
 
 ## While Loop
-```
+```python
 #"while" something is true
 #perform an action
 while True:
@@ -95,10 +94,12 @@ while True:
 		break
 ```
 
---
+Try it out!
 
-code within the loop may invalidate the condition
-```
+---
+
+Code within the loop may invalidate the condition
+```python
 loop = True
 while loop:
 	print 'Are we there yet?'
@@ -106,28 +107,40 @@ while loop:
 print 'Done the loop'
 ```
 
---
+Try it out!
+
+---
 
 To run a certain number of times we test a
 variable and increment within the loop
-```
+```python
 x = 1
 while x < 10:
 	print x
 	x += 1
 ```
+Try it out!
 
---
+---
 
 ## Exercise
 
 Print from 10 to 1
 
---
+---
 
-## Excercise (for later)
+```python
+x = 10
+while x > 0:
+	print x
+	x -= 1
+```
 
-Guided Exercise
+---
+
+## Exercise
+
+Guess a Number
 
 - We’re going to write a game for the computer
 - The computer will pick a number and we have to guess it
@@ -140,21 +153,40 @@ int x = randint(1,10)
 - We know how to compare guesses
 - We want to give the user multiple chances
 
-					</script>
-				</section>
-                <section id="data-structures" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-## Lists
-- Lists are lists
-- That was useless
-- But seriously, they’re just a set of objects
-- Lists can hold strings, integers, floats, booleans, and anything else you
-can create
+---
 
---
+```python
+from random import randint
+x = randint(1,10)
+print "I'm thinking of a number between 1 and 10"
+
+correct = False
+
+while not correct:
+    guess = raw_input("Guess the number\n")
+    guess = int(guess)
+    if guess > x:
+        print 'Too high'
+    elif guess < x:
+        print 'Too low'
+    else:
+        print "You're right!"
+        correct = True
+```
+
+---
+
+## Data Structures
+
+- [Lists](https://docs.python.org/2/tutorial/introduction.html#lists)
+ - An ordered set of objects
+ - Lists can hold strings, integers, floats, booleans, and 
+anything else you can create
+
+---
 
 ## Creating Lists
-```
+```python
 mylist = [1,2,3,4]
 print mylist #[1, 2, 3, 4]
 companies = ['My Elephant Brain', 're:3D', 'Hacker You']
@@ -165,11 +197,13 @@ print kitchen_sink
 #[1, 'a', True]
 ```
 
---
+---
 
 ## Accessing Items in a List
 
 ```
+>>> companies = ['My Elephant Brain', 're:3D', 'Hacker You']
+['My Elephant Brain', 're:3D', 'Hacker You']
 >>> companies[1]
 're:3D'
 >>> companies[-1]
@@ -180,40 +214,42 @@ line 1, in <module>
 IndexError: list index out of range
 ```
 
---
+---
 
 ## Exercise
 - Using a list and a while loop, print the days of the week
 - ‘break’ the loop on Wednesday
 
---
+---
 
-Modifying a List
-```
-#add and item
+### Modifying a List
+
+```python
+l = []
+#add an item
 l.append(5)
 print l
-#remove and item
+#remove an item
 l.remove(3)
 print l
 # remove throws an error if the item does not exist
 l.remove(9)
 ```
 
---
-
+---
 
 ## A Quick jump Back to Loops
-```
+```python
 # for loops make it easy to loop over a list
 for company in companies:
-print company
+    print company
 # they are also useful for looping
 # a known number of times
 for i in range(1,10):
 	print i
 ```
---
+
+---
 
 ## Exercise
 
@@ -223,15 +259,22 @@ for i in range(1,10):
 argument to tell it the number to increment by each time
  - e.g. `range(0, 10, 2)`
 
-					</script>
-				</section>
-                <section id="hangman" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
-# The Grand Finale
-## Hangman Game
-(credit: Python Programming for the Absolute Beginner)
+---
 
---
+## More data structures...
+- Sets
+ - Like lists, but (1) unordered and (2) only store unique elements
+- Tuples
+ - Like lists, but cannot change after creation
+- Dictionaries
+ - Unordered list indexed by keys
+```python
+my_dict = {
+	'name': 'Jennifer Reiber Kyle',
+	'group': 'Iowa Tech Chicks'}
+```
+
+---
 
 # Hangman Game!
 (credit: Python Programming for the Absolute Beginner)
@@ -242,23 +285,69 @@ argument to tell it the number to increment by each time
 - Computers need specific instructions, so you need to
 break it down.
 - You can start by playing hangman on paper with each other.
-- Start with [hangman_draft.py](./examples/hangman_draft.py)
 
---
+---
+
+### Hint: 
+
+- Create a list of hangman 'states'
+
+```python
+HANGMAN = [
+"""
+------
+|    |
+|
+|
+|
+|
+|
+|
+|
+------
+""",
+...
+]
+```
+
+---
+
+### Hint: 
+
+- Create a list of words
+- Pick the secret word:
+ - `random.choice(WORDS)`
+
+- Track the number of wrong guesses
+- Track the letters used
+- Create a string that tracks the correct guesses
+ - One dash for each letter in the secret word:
+  - `so_far = "-" * len(word)`
+ - For each correct guess, place the letter in its correct spot
+
+---
+
+### Solution
+
+[https://github.com/jreiberkyle/intro-to-python/blob/master/examples/hangman_soln.py](./examples/hangman_soln.py)
+
+---
 
 # Functions
 We put reusable code inside 'functions'
 
-functions.py
+
 ```
 def add_two(a, b):
-return a + b
+    return a + b
+
 ans = add_two(1, 2)
 print ans
 ```
---
 
-Exercise
+---
+
+## Exercise
 
 Write functions to do the following
 
@@ -267,28 +356,45 @@ Write functions to do the following
 - Print the sequence of a given number, down to zero
  - 5, 4, 3, 2, 1, 0
 
---
+---
 
-# Modules
+## Modules (local)
 Python code is reusable by other code
+
+functions.py
+```
+def add_two(a, b):
+    return a + b
+```
+
 start python in the same folder as functions.py
+
 ```
 from functions import add_two
 print add_two(1,2)
 ```
 
-					</script>
-				</section>
-                <section id="further" data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-                    <script type="text/template">
+---
+
+## Python Libraries
+
+One of the greatest aspects of Python is the large number of Libraries
+
+Some useful libraries:
+- numpy (how we process images as arrays)
+- scipy
+- 
+
+---
 
 ### You’re programmers now!
 - Sure there’s more to know
 - There’s always more to know
 - The trick is using what you know
-- http://www.pyschools.com/
-- http://www.djangobook.com/en/2.0/index.html
-- http://learnpythonthehardway.org/
+- More Resources
+ - http://www.pyschools.com/	
+ - http://www.djangobook.com/en/2.0/index.html
+ - http://learnpythonthehardway.org/
 
            </script>
                 </section>
